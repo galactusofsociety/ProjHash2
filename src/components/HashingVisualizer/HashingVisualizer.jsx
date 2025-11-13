@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Controls from '../Controls/Controls';
 import HashTable from '../HashTable/HashTable';
-import Pseudocode from './Pseudocode.jsx';
+import Pseudocode from './Pseudocode'
 import {
     chainingInsert, chainingSearch, chainingDelete,
     linearProbingInsert, linearProbingSearch, linearProbingDelete,
