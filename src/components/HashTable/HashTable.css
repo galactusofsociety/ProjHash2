@@ -1,0 +1,84 @@
+.hash-table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.hash-table {
+    display: flex;
+    flex-direction: row; /* HORIZONTAL LAYOUT */
+    width: 100%;
+    min-height: 150px; /* Give it a minimum height */
+    border: 2px solid #333;
+    border-radius: 8px;
+    overflow: hidden; /* Hide anything that might poke out of the rounded corners */
+}
+
+.table-column {
+    display: flex;
+    flex-direction: column; /* Each item is a column of (index, cell) */
+    flex: 1; /* Each column will grow equally to fill the space */
+    border-right: 1px solid #ccc;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.table-column:last-child {
+    border-right: none;
+}
+
+.table-index {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #343a40;
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px solid #333;
+    font-size: clamp(0.8rem, 2vw, 1.2rem); /* Responsive font size */
+}
+
+.table-cell {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+    background-color: #f8f9fa;
+}
+
+.table-value {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    display: inline-block;
+    font-size: clamp(0.75rem, 2vw, 1.1rem);
+}
+
+/* Chaining specific styles for vertical layout */
+.chain-container {
+    display: flex;
+    flex-direction: column; /* Chains go DOWN */
+    align-items: center;
+    gap: 5px;
+}
+
+.chain-node {
+    background-color: #28a745;
+}
+
+.chain-arrow {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    color: #333;
+    line-height: 0.5; /* Reduce space taken by the arrow */
+}
+
+.chain-node.highlight-chain {
+    background-color: #fd7e14;
+    transform: scale(1.15);
+    z-index: 10;
+}
