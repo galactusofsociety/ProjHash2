@@ -1,0 +1,26 @@
+.pseudocode-container {
+flex: 1;
+min-width: 300px;
+display: flex;
+flex-direction: column;
+}
+.pseudocode-box {
+background-color: #282c34;
+color: #f8f8f2;
+padding: 20px;
+border-radius: 8px;
+text-align: left;
+font-family: 'Courier New', Courier, monospace;
+font-size: 0.9em;
+line-height: 1.5;
+white-space: pre-wrap;
+flex-grow: 1;
+}
+.code-line {
+transition: background-color 0.3s ease;
+padding: 2px 5px;
+border-radius: 3px;
+}
+.highlighted-line {
+background-color: #44475a;
+}
