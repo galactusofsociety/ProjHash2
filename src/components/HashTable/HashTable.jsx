@@ -29,7 +29,8 @@ const HashTable = ({ table, mode, highlightedIndex, highlightedChainIndex }) => 
                                     )
                                 ) : ( // Chaining mode
                                     <div className="chain-container">
-                                        {bucket && bucket.map((value, i) => (
+                                        {/* THIS IS THE FIX: Check if the bucket is actually an array before mapping */}
+                                        {Array.isArray(bucket) && bucket.map((value, i) => (
                                             <React.Fragment key={i}>
                                                 <motion.div
                                                     className={`table-value chain-node ${highlightedChainIndex === i ? 'highlight-chain' : ''}`}
